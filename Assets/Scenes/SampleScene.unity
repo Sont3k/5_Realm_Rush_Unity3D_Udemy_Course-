@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.45118564, g: 0.5009366, b: 0.57375324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -291,6 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35929fa8301a6b40908b0c839cd7df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startWaypoint: {fileID: 950544875975761078}
+  endWaypoint: {fileID: 1200012755}
 --- !u!1001 &123826548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -462,6 +464,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 5,1
+      objectReference: {fileID: 0}
+    - target: {fileID: 950544876656208230, guid: 17e3e35e9dfbdbf4c825d6f34a2f6d74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e3e35e9dfbdbf4c825d6f34a2f6d74, type: 3}
@@ -873,8 +880,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: -0.27933574, y: -0.079432346, z: 0.023239186, w: -0.9566201}
+  m_LocalPosition: {x: 2.083658, y: 47.941616, z: -31.17408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1482,6 +1489,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1200012753}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1200012755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7374377782947586032, guid: 17e3e35e9dfbdbf4c825d6f34a2f6d74,
+    type: 3}
+  m_PrefabInstance: {fileID: 1200012753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c12a17ac3c5c04eb2ff6814ff7bd1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1353894512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1926,6 +1945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 0,0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950544876656208230, guid: 17e3e35e9dfbdbf4c825d6f34a2f6d74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e3e35e9dfbdbf4c825d6f34a2f6d74, type: 3}
