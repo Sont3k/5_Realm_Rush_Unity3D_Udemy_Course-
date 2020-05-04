@@ -15,13 +15,13 @@ public class CubeEditor : MonoBehaviour
         waypoint = GetComponent<Waypoint>();
     }
 
-    void Update()
+    private void Update()
     {
         SnapToGrid();
         UpdateLabel();
     }
 
-    void UpdateLabel()
+    private void UpdateLabel()
     {
         Vector2 gridPos = waypoint.GetGridPos();
 
@@ -31,7 +31,7 @@ public class CubeEditor : MonoBehaviour
         gameObject.name = labelText;
     }
 
-    void SnapToGrid()
+    private void SnapToGrid()
     {
         int gridSize = waypoint.GetGridSize();
         Vector2 gridPos = waypoint.GetGridPos() * gridSize;
