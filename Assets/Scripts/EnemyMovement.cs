@@ -23,6 +23,7 @@ public class EnemyMovement : MonoBehaviour
         foreach(Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.GetChild(0).position;
+            transform.position += new Vector3(0f, 5f, 0f);
             yield return new WaitForSeconds(1f);
         }
 
