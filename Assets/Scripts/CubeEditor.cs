@@ -9,23 +9,30 @@ using UnityEngine;
 public class CubeEditor : MonoBehaviour
 {
     Waypoint waypoint;
+    TextMesh textMesh;
+    [SerializeField] float blockHeight = 0f;
 
     private void Awake()
     {
         waypoint = GetComponent<Waypoint>();
+        textMesh = GetComponentInChildren<TextMesh>();
     }
 
     private void Update()
     {
         SnapToGrid();
-        UpdateLabel();
+        
+        if (textMesh)
+        {
+            UpdateLabel();
+        }
     }
 
     private void UpdateLabel()
     {
         Vector2 gridPos = waypoint.GetGridPos();
 
-        TextMesh textMesh = GetComponentInChildren<TextMesh>();
+
         string labelText = (gridPos.x) + "," + (gridPos.y);
         textMesh.text = labelText;
         gameObject.name = labelText;
@@ -38,7 +45,7 @@ public class CubeEditor : MonoBehaviour
 
         transform.position = new Vector3(
             gridPos.x,
-            0f,
+            blockHeight,
             gridPos.y
         );
     }
