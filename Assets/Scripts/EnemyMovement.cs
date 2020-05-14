@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
         foreach(Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.GetChild(0).position;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
         }
 
         print("Ending patrol");
