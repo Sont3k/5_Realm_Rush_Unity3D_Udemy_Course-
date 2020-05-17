@@ -50,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPan: {fileID: 7772561289258278401}
   targetEnemy: {fileID: 0}
+  attackRange: 10
+  projectileParticle: {fileID: 0}
 --- !u!114 &499464363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPan: {fileID: 7772561289258278401}
   targetEnemy: {fileID: 0}
+  attackRange: 40
+  projectileParticle: {fileID: 7769620915208361954}
 --- !u!1001 &308185326495229711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,6 +106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bullets
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040572288599126253, guid: 5d256572aa94a6744bcfc65fca25eacb,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8040572288599126253, guid: 5d256572aa94a6744bcfc65fca25eacb,
         type: 3}
@@ -190,6 +199,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d256572aa94a6744bcfc65fca25eacb, type: 3}
+--- !u!198 &7769620915208361954 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8040572288599126253, guid: 5d256572aa94a6744bcfc65fca25eacb,
+    type: 3}
+  m_PrefabInstance: {fileID: 308185326495229711}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7769620915594472041
 PrefabInstance:
   m_ObjectHideFlags: 0

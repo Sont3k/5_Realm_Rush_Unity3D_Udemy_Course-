@@ -22,12 +22,20 @@ public class Pathfinder : MonoBehaviour
 
     public IEnumerable<Waypoint> GetPath()
     {
+        if (path.Count == 0)
+        {
+            CalculatePath();
+        }
+
+        return path;
+    }
+
+    private void CalculatePath()
+    {
         LoadBlocks();
         ColorStartAndEnd();
         BreadthFirstSearch();
         CreatePath();
-
-        return path;
     }
 
     private void LoadBlocks()
@@ -91,7 +99,7 @@ public class Pathfinder : MonoBehaviour
         foreach (var direction in directions)
         {
             Vector2Int neighbourCoordinates = searchCenter.GetGridPos() + direction;
-            
+
             if (grid.ContainsKey(neighbourCoordinates))
             {
                 QueueNewNeighbours(neighbourCoordinates);
@@ -120,7 +128,7 @@ public class Pathfinder : MonoBehaviour
 
         Waypoint previous = endWaypoint.exploredFrom;
 
-        while(previous != startWaypoint)
+        while (previous != startWaypoint)
         {
             path.Add(previous);
             previous = previous.exploredFrom;
