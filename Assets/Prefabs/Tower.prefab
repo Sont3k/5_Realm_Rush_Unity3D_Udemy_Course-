@@ -9,9 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7769620916739406435}
-  - component: {fileID: 499464361}
-  - component: {fileID: 499464363}
-  - component: {fileID: 499464364}
   - component: {fileID: 1811648287}
   m_Layer: 0
   m_Name: Tower
@@ -36,49 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &499464361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769620916739406434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10868129dad9e1540a73a532670e9908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPan: {fileID: 7772561289258278401}
-  targetEnemy: {fileID: 0}
-  attackRange: 10
-  projectileParticle: {fileID: 0}
---- !u!114 &499464363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769620916739406434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54441a76b4bea6646ab14466291c41bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockHeight: -2.5
---- !u!114 &499464364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7769620916739406434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58c12a17ac3c5c04eb2ff6814ff7bd1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isExplored: 0
-  exploredFrom: {fileID: 0}
 --- !u!114 &1811648287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPan: {fileID: 7772561289258278401}
-  targetEnemy: {fileID: 0}
   attackRange: 40
   projectileParticle: {fileID: 7769620915208361954}
 --- !u!1001 &308185326495229711

@@ -7,6 +7,7 @@ public class Waypoint : MonoBehaviour
     // public ok here as is a data class
     public bool isExplored;
     public Waypoint exploredFrom;
+    public bool isPlaceable = true;
 
     Vector2Int gridPos;
     const int gridSize = 10;
@@ -30,7 +31,18 @@ public class Waypoint : MonoBehaviour
     //     topMeshRenderer.material.color = color;
     // }
 
-    private void OnMouseOver() {
-        print(gameObject.name);
+    private void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0)) // left click
+        {
+            if (isPlaceable)
+            {
+                print(gameObject.name + " tower placement");
+            }
+            else
+            {
+                print("Can't place here");
+            }
+        }
     }
 }
