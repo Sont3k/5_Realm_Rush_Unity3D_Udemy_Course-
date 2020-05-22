@@ -77,6 +77,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8040572288599126253, guid: 5d256572aa94a6744bcfc65fca25eacb,
         type: 3}
+      propertyPath: CollisionModule.minKillSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040572288599126253, guid: 5d256572aa94a6744bcfc65fca25eacb,
+        type: 3}
       propertyPath: CollisionModule.collisionMessages
       value: 1
       objectReference: {fileID: 0}
