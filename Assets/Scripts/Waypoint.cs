@@ -9,6 +9,9 @@ public class Waypoint : MonoBehaviour
     public Waypoint exploredFrom;
     public bool isPlaceable = true;
 
+    [SerializeField] Tower tower;
+    // [SerializeField] GameObject towerHolder;
+
     Vector2Int gridPos;
     const int gridSize = 10;
 
@@ -33,11 +36,17 @@ public class Waypoint : MonoBehaviour
 
     private void OnMouseOver()
     {
+        tower.transform.position = new Vector3(transform.position.x, transform.position.y - 2.5f, transform.position.z);
+
         if (Input.GetMouseButtonDown(0)) // left click
         {
             if (isPlaceable)
             {
                 print(gameObject.name + " tower placement");
+                var towerClone = Instantiate(tower, tower.transform.position, transform.rotation);
+                
+                // towerClone.transform.parent = towerHolder.transform;
+                isPlaceable = false;
             }
             else
             {
