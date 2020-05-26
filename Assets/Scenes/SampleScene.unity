@@ -130,7 +130,6 @@ GameObject:
   m_Component:
   - component: {fileID: 54534823}
   - component: {fileID: 54534824}
-  - component: {fileID: 54534825}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -193,20 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startWaypoint: {fileID: 858795041}
   endWaypoint: {fileID: 550880197}
---- !u!114 &54534825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54534822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e64e9c944a43a24ebccdc6b05ffc1af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerLimit: 5
-  tower: {fileID: 1811648287, guid: 4aac80f8b362baf4987e617fdf5776fc, type: 3}
 --- !u!1001 &190475231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -971,6 +956,7 @@ MonoBehaviour:
   secondsBetweenSpawns: 4
   enemyPrefab: {fileID: 7911961296340055218, guid: 04f81ff9814844ccfa08226f8d46a3f4,
     type: 3}
+  enemyParent: {fileID: 609842340}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,6 +1994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1589447710}
+  - component: {fileID: 1589447711}
   m_Layer: 0
   m_Name: Towers
   m_TagString: Untagged
@@ -2029,6 +2016,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1589447711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589447709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e64e9c944a43a24ebccdc6b05ffc1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerLimit: 5
+  tower: {fileID: 1811648287, guid: 4aac80f8b362baf4987e617fdf5776fc, type: 3}
+  towerParent: {fileID: 1589447710}
 --- !u!1 &1708036862
 GameObject:
   m_ObjectHideFlags: 0

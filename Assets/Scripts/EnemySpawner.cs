@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [Range(.1f, 120f)][SerializeField] float secondsBetweenSpawns = 2f;
     [SerializeField] EnemyMovement enemyPrefab;
+    [SerializeField] Transform enemyParent;
 
     void Start()
     {
@@ -16,7 +17,9 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            var enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            enemy.transform.parent = enemyParent;
+
             yield return new WaitForSeconds(secondsBetweenSpawns);
         }
     }
