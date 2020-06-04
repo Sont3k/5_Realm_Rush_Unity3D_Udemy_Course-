@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
@@ -13,14 +10,16 @@ public class EnemyDamage : MonoBehaviour
 
     AudioSource audioSource;
 
-    private void Start() {
+    private void Start()
+    {
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnParticleCollision(GameObject other) {
+    private void OnParticleCollision(GameObject other)
+    {
         ProcessHit();
 
-        if(hitPoints <= 0)
+        if (hitPoints <= 0)
         {
             KillEnemy();
         }
@@ -38,9 +37,9 @@ public class EnemyDamage : MonoBehaviour
     {
         // important to instantiate before destroying this object
         var vfx = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
-        
+
         Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(enemyDeathSFX, Camera.main.transform.position);
         Destroy(vfx.gameObject, vfx.main.duration);
-        audioSource.PlayOneShot(enemyDeathSFX);
     }
 }
